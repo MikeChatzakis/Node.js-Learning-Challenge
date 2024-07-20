@@ -7,24 +7,26 @@
 <img src="/img/index-image.webp" alt="my beautiful image" class="index_image" width="600" height="324">
 
 <section class="article">
-    <h2 class="article__heading" Latest posts> </h2>
+    <h2 class="article__heading">Latest Posts</h2>
 
     <ul class="article-ul">
-        <li>
-            <a href="#">
-                <span> Post Title</span>
-                <span class="article-list__date">Date</span>
-            </a>
 
-        </li>
+        <% data.forEach(post => { %>
         <li>
-            <a href="#">
-                <span> Post Title</span>
-                <span class="article-list__date">Date</span>
+            <a href="/post/<%= post._id%>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
             </a>
         </li>
+
+        <% }) %>
     </ul>
 
-<a herf="#" class="pagination"&lt; View order posts> </a>
+    <!-- display previous page button -->
+    <% if (nextPage !=null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; View older posts</a>
+    <% } %>
+     
+
 
 </section>

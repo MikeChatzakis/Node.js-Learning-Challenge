@@ -13,32 +13,6 @@
 
 }
 
-.searchBar{
-    visibility: hidden;
-    transform: translateY(-100px);
-    background-color: var(--black);
-    padding: 4px 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-.searchBar.open{
-    transform: translateY(0);
-    transition: transform 0.1s;
-}
-.searchBar input{
-    margin: 0;
-    padding: 0;
-}
-
-#searchClose{
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: var(--grey-light);
-    padding: 15px;
-}
-
 body{
     font-family: "Quicksand", sans-serif;
     color: var(--black);
@@ -105,6 +79,7 @@ img{
 }
 
 .index_image{
+    /* visibility: hidden; */
     max-height: 600px;
     filter: drop-shadow(0px 44px 34px rgba(0,0,0,0.25));
     overflow: hidden;
@@ -211,10 +186,14 @@ img{
     margin: 5px 0 40px 0;
 }
 
-
+/* Articles styles*/
 .article__heading{
     margin-top: 4rem;
     font-weight: 400;
+}
+
+.article__body{
+    font-size: var(--font-size-md);
 }
 
 .article-ul{
@@ -246,6 +225,9 @@ img{
         flex-direction: row;
         align-items: center;
     }
+    .article-list__date{
+        text-align: right;
+    }
 }
 
 .article-ul li {
@@ -262,8 +244,8 @@ img{
     filter:none;
 }
 
-.article-ul:hover{
-    filter:blur(3px);
+.article-ul:hover li{
+    filter:blur(1.3px);
 }
 
 .article-ul:hover li:hover{
@@ -282,6 +264,7 @@ img{
     color: var(--black);
 }
 
+
 .article{
     white-space: pre-wrap;
 }
@@ -289,4 +272,57 @@ img{
 .footer{
     margin: 4rem;
     text-align: center;
+}
+/* search Bar */
+
+.searchBar{
+    visibility: hidden;
+    transform:translateY(-100px);
+    background-color: var(--black);
+    padding: 4px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.searchBar.open{
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+.searchBar input{
+    margin: 0;
+    padding: 0;
+}
+
+#searchClose{
+    position:absolute;
+    top: 0;
+    right: 0;
+    color: var(--grey-light);
+    padding: 15px;
+}
+/* Dashboard Admin */
+.admin-posts{
+    padding: 0;
+    margin: 0;
+}
+
+.admin-post-controls .btn form{
+    display: inline-block;
+}
+
+.admin-posts .btn{
+    display: inline-block;
+    background-color: var(--black);
+    color: var(--grey-light);
+    border: 0;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    line-height: 2;
+}
+
+.admin-posts li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
 }
