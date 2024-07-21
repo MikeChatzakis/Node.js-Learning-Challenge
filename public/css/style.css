@@ -47,6 +47,7 @@ textarea{
 }
 
 .btn{
+    border-radius:10px;
     background-color: var(--black);
     border: none;
     color: white;
@@ -110,13 +111,14 @@ img{
 .header__logo{
     grid-area: logo;
     font-weight: 800;
-    font-size: 25px;
+    font-size: var(--font-size-lg);
     text-decoration: none;
 }
 
 .header__logo:hover{
     text-decoration: underline;
 }
+
 
 /* header search button */
 .header__button{
@@ -135,7 +137,7 @@ img{
     border-radius: var(--border-radius);
     border: 2px solid transparent;
     font-family: "Quicksand", sans-serif;
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     font-weight: 600;
     color:(--black);
 }
@@ -149,6 +151,7 @@ img{
     grid-area: menu;
     display: flex;
     justify-content: center;
+    font-size: var(--font-size-md);
 }
 
 .header__nav ul{
@@ -161,6 +164,7 @@ img{
 
 .header__nav ul a{
     padding: 10px;
+    color: var(--black);
     text-decoration: none;
 }
 
@@ -168,7 +172,7 @@ img{
     text-decoration: underline;
 }
 
-.header__nav ul a:active{
+.header__nav ul a.active{
     color: var(--grey);
 }
 
@@ -301,6 +305,12 @@ img{
     padding: 15px;
 }
 /* Dashboard Admin */
+.admin-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .admin-posts{
     padding: 0;
     margin: 0;

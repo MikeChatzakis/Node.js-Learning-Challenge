@@ -31,7 +31,8 @@ router.get('', async (req,res)=>{
             locals, 
             data,
             current: page,
-            nextPage: hasNextPage?nextPage:null
+            nextPage: hasNextPage?nextPage:null,
+            currentRoute: '/'
 
         });
     } catch (error) {
@@ -98,25 +99,11 @@ router.post('/search', async (req, res) => {
   });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //router for about page
 router.get('/about',(req,res)=>{
-    res.render('about');
+    res.render('about',{
+        currentRoute:'/about'
+    });
 });
 
 module.exports = router;
